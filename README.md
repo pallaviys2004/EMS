@@ -116,3 +116,26 @@ Example Request:
 
 
 If you want the **heading `Verify OTP` to appear bold and larger on GitHub**, `### **2. Verify OTP**` is correct.
+
+**Database**
+
+spring.application.name=EMS
+
+spring.datasource.url=jdbc:mysql://localhost:3306/EMS?createDatabaseIfNotExist=true
+spring.datasource.username=root
+spring.datasource.password=root
+
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+spring.jpa.database-platform=org.hibernate.dialect.MySQLDialect
+
+spring.mail.host=smtp.gmail.com
+spring.mail.port=587
+spring.mail.username=yournewemail@gmail.com
+spring.mail.password=your_new_app_password
+spring.mail.properties.mail.smtp.auth=true
+spring.mail.properties.mail.smtp.starttls.enable=true
+
+server.port=8084

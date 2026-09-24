@@ -1,30 +1,29 @@
 # Employee Management System (EMS)
 
-A simple Employee Management System developed using Java and Spring Boot.
-This project provides REST APIs for user registration, OTP verification, and employee management.
+A simple **Employee Management System** developed using **Java and Spring Boot**. This project provides REST APIs for user registration, OTP verification, and employee management.
 
 ## Technologies Used
 
-- Java
-- Spring Boot
-- Spring MVC
-- Spring Data JPA
-- Hibernate
-- MySQL
-- REST API
-- Lombok
-- Maven
+* Java
+* Spring Boot
+* Spring MVC
+* Spring Data JPA
+* Hibernate
+* MySQL
+* REST API
+* Lombok
+* Maven
 
 ## Project Features
 
-- User Registration
-- Email-based OTP Verification
-- OTP Generation
-- User Verification
-- Employee Management
-- RESTful APIs
-- MySQL Database Integration
-- Layered Architecture
+* User Registration
+* Email-based OTP Verification
+* OTP Generation
+* User Verification
+* Employee Management
+* RESTful APIs
+* MySQL Database Integration
+* Layered Architecture
 
 ## Project Structure
 
@@ -50,24 +49,23 @@ EMS
 │       │       ├── util
 │       │       │   └── OtpGenerator.java
 │       │       └── EmsApplication.java
-│       │
 │       └── resources
 │           ├── static
 │           ├── templates
 │           └── application.properties
-│
 ├── pom.xml
 ├── .gitignore
 └── README.md
+```
 
+## Database Configuration
 
-**Database**
-
+```properties
 spring.application.name=EMS
 
 spring.datasource.url=jdbc:mysql://localhost:3306/EMS?createDatabaseIfNotExist=true
 spring.datasource.username=root
-spring.datasource.password=root
+spring.datasource.password=your_password
 
 spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
 
@@ -77,46 +75,50 @@ spring.jpa.database-platform=org.hibernate.dialect.MySQLDialect
 
 spring.mail.host=smtp.gmail.com
 spring.mail.port=587
-spring.mail.username=yournewemail@gmail.com
-spring.mail.password=your_new_app_password
+spring.mail.username=your-email@gmail.com
+spring.mail.password=your-app-password
 spring.mail.properties.mail.smtp.auth=true
 spring.mail.properties.mail.smtp.starttls.enable=true
 
 server.port=8084
+```
 
+> **Note:** Do not upload your actual email password or App Password to GitHub.
 
-## **How It Works**
+## How It Works
 
-### **1. User Registration**
+### 1. User Registration
 
 The user provides:
 
-- **Name**
-- **Email**
-- **Password**
+* Name
+* Email
+* Password
 
 The registration API saves the user details and generates an OTP.
 
-### **2. OTP Verification**
+### 2. OTP Verification
 
 The OTP is sent to the registered email address.
 
 The user enters:
 
-- **Email**
-- **OTP**
+* Email
+* OTP
 
 The system verifies the OTP and completes the user verification process.
 
-## **API Endpoints**
+## API Endpoints
 
-### **1. Register User**
+### 1. Register User
 
 **Endpoint:**
 
 ```http
 POST /users/register
-**Example Request:**
+```
+
+**Request:**
 
 ```json
 {
@@ -124,21 +126,27 @@ POST /users/register
     "email": "pallavi@gmail.com",
     "password": "password123"
 }
+```
 
-2. Verify OTP
+### 2. Verify OTP
 
-Endpoint:
+**Endpoint:**
 
+```http
 POST /users/verify-otp
+```
 
-Example Request:
+**Request:**
 
+```json
 {
     "email": "pallavi@gmail.com",
     "otp": "123456"
 }
+```
 
+## Author
 
+**Pallavi Y S**
 
-If you want the **heading `Verify OTP` to appear bold and larger on GitHub**, `### **2. Verify OTP**` is correct.
-
+GitHub: https://github.com/pallaviys2004
